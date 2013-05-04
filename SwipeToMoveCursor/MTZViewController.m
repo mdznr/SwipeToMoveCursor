@@ -7,6 +7,7 @@
 //
 
 #import "MTZViewController.h"
+#import "MTZSwipeToMoveCursorTextView.h"
 
 @interface MTZViewController ()
 

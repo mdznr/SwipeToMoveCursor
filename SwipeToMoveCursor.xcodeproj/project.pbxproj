@@ -18,6 +18,7 @@
 		C9D0F49917356AB800AC055D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F49817356AB800AC055D /* Default-568h@2x.png */; };
 		C9D0F49C17356AB800AC055D /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F49B17356AB800AC055D /* MTZViewController.m */; };
 		C9D0F49F17356AB800AC055D /* MTZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F49D17356AB800AC055D /* MTZViewController.xib */; };
+		C9D0F4A717356AEB00AC055D /* MTZSwipeToMoveCursorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F4A617356AEB00AC055D /* MTZSwipeToMoveCursorTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		C9D0F49A17356AB800AC055D /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
 		C9D0F49B17356AB800AC055D /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
 		C9D0F49E17356AB800AC055D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MTZViewController.xib; sourceTree = "<group>"; };
+		C9D0F4A517356AEB00AC055D /* MTZSwipeToMoveCursorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSwipeToMoveCursorTextView.h; sourceTree = "<group>"; };
+		C9D0F4A617356AEB00AC055D /* MTZSwipeToMoveCursorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSwipeToMoveCursorTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				C9D0F49217356AB800AC055D /* MTZAppDelegate.m */,
 				C9D0F49A17356AB800AC055D /* MTZViewController.h */,
 				C9D0F49B17356AB800AC055D /* MTZViewController.m */,
+				C9D0F4A517356AEB00AC055D /* MTZSwipeToMoveCursorTextView.h */,
+				C9D0F4A617356AEB00AC055D /* MTZSwipeToMoveCursorTextView.m */,
 				C9D0F49D17356AB800AC055D /* MTZViewController.xib */,
 				C9D0F48917356AB800AC055D /* Supporting Files */,
 			);
@@ -177,6 +182,7 @@
 				C9D0F48F17356AB800AC055D /* main.m in Sources */,
 				C9D0F49317356AB800AC055D /* MTZAppDelegate.m in Sources */,
 				C9D0F49C17356AB800AC055D /* MTZViewController.m in Sources */,
+				C9D0F4A717356AEB00AC055D /* MTZSwipeToMoveCursorTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
