@@ -14,7 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+		// Initialization code
 		[self setup];
     }
     return self;
@@ -24,7 +24,7 @@
 {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
-        // Initialization code
+		// Initialization code
 		[self setup];
 	}
     return self;
@@ -54,6 +54,15 @@
 - (void)didSwipeLeft:(id)sender
 {
 	NSRange range = self.selectedRange;
+	
+	if ( range.length > 0 )
+	{
+		// increase length
+		// snap to word?
+		// add or subtract from length?
+		// two finger swipe left/right?
+	}
+	
 	range.location--;
 	[self setSelectedRange:range];
 }
