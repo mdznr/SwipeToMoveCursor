@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTZSwipeToMoveCursorTextView.h"
 
 @interface MTZViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet MTZSwipeToMoveCursorTextView *textView;
 
 @end

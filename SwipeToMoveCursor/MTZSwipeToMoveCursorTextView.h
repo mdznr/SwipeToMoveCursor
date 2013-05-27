@@ -10,4 +10,6 @@
 
 @interface MTZSwipeToMoveCursorTextView : UITextView
 
+@property (nonatomic) BOOL shouldMoveTwiceForTwoFingerSwipes;
+
 @end

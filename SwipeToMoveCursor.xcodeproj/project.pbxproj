@@ -90,9 +90,9 @@
 				C9D0F49217356AB800AC055D /* MTZAppDelegate.m */,
 				C9D0F49A17356AB800AC055D /* MTZViewController.h */,
 				C9D0F49B17356AB800AC055D /* MTZViewController.m */,
+				C9D0F49D17356AB800AC055D /* MTZViewController.xib */,
 				C9D0F4A517356AEB00AC055D /* MTZSwipeToMoveCursorTextView.h */,
 				C9D0F4A617356AEB00AC055D /* MTZSwipeToMoveCursorTextView.m */,
-				C9D0F49D17356AB800AC055D /* MTZViewController.xib */,
 				C9D0F48917356AB800AC055D /* Supporting Files */,
 			);
 			path = SwipeToMoveCursor;
@@ -305,6 +305,7 @@
 				C9D0F4A417356AB800AC055D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

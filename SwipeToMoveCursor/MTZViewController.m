@@ -7,7 +7,6 @@
 //
 
 #import "MTZViewController.h"
-#import "MTZSwipeToMoveCursorTextView.h"
 
 @interface MTZViewController ()
 
@@ -19,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[_textView setShouldMoveTwiceForTwoFingerSwipes:YES];
 }
 
 - (void)didReceiveMemoryWarning

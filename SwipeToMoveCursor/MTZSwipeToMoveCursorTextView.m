@@ -8,6 +8,12 @@
 
 #import "MTZSwipeToMoveCursorTextView.h"
 
+@interface MTZSwipeToMoveCursorTextView ()
+
+@property (nonatomic)  UISwipeGestureRecognizer *swipeLeft, *swipeLeft2, *swipeRight, *swipeRight2;
+
+@end
+
 @implementation MTZSwipeToMoveCursorTextView
 
 - (id)initWithFrame:(CGRect)frame
@@ -42,13 +48,36 @@
 
 - (void)setup
 {
-	UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
-	[swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-	[self addGestureRecognizer:swipeLeft];
+	_swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+	[_swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+	[self addGestureRecognizer:_swipeLeft];
 	
-	UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
-	[swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-	[self addGestureRecognizer:swipeRight];
+	_swipeLeft2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft2:)];
+	[_swipeLeft2 setNumberOfTouchesRequired:2];
+	[_swipeLeft2 setDirection:UISwipeGestureRecognizerDirectionLeft];
+	
+	_swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
+	[_swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+	[self addGestureRecognizer:_swipeRight];
+	
+	_swipeRight2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight2:)];
+	[_swipeRight2 setNumberOfTouchesRequired:2];
+	[_swipeRight2 setDirection:UISwipeGestureRecognizerDirectionRight];
+	
+	_shouldMoveTwiceForTwoFingerSwipes = NO;
+}
+
+- (void)setShouldMoveTwiceForTwoFingerSwipes:(BOOL)shouldMoveTwiceForTwoFingerSwipes
+{
+	if ( shouldMoveTwiceForTwoFingerSwipes ) {
+		[self addGestureRecognizer:_swipeLeft];
+		[self addGestureRecognizer:_swipeRight];
+	} else {
+		[self removeGestureRecognizer:_swipeLeft2];
+		[self removeGestureRecognizer:_swipeRight2];
+	}
+	
+	_shouldMoveTwiceForTwoFingerSwipes = shouldMoveTwiceForTwoFingerSwipes;
 }
 
 - (void)didSwipeLeft:(id)sender
@@ -67,10 +96,27 @@
 	[self setSelectedRange:range];
 }
 
+- (void)didSwipeLeft2:(id)sender
+{
+	NSRange range = self.selectedRange;
+	
+	range.location -= 2;
+	[self setSelectedRange:range];
+}
+
 - (void)didSwipeRight:(id)sender
 {
 	NSRange range = self.selectedRange;
+	
 	range.location++;
+	[self setSelectedRange:range];
+}
+
+- (void)didSwipeRight2:(id)sender
+{
+	NSRange range = self.selectedRange;
+	
+	range.location += 2;
 	[self setSelectedRange:range];
 }
 
