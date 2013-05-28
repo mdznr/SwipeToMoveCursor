@@ -70,8 +70,8 @@
 - (void)setShouldMoveTwiceForTwoFingerSwipes:(BOOL)shouldMoveTwiceForTwoFingerSwipes
 {
 	if ( shouldMoveTwiceForTwoFingerSwipes ) {
-		[self addGestureRecognizer:_swipeLeft];
-		[self addGestureRecognizer:_swipeRight];
+		[self addGestureRecognizer:_swipeLeft2];
+		[self addGestureRecognizer:_swipeRight2];
 	} else {
 		[self removeGestureRecognizer:_swipeLeft2];
 		[self removeGestureRecognizer:_swipeRight2];
